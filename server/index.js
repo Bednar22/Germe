@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv/config');
 const mongoose = require('mongoose');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 
@@ -24,8 +24,8 @@ app.listen(port, () => {
 });
 
 // Serve static files from the React frontend app
-// app.use(express.static(path.join(__dirname, '../client/build')));
-// // Anything that doesn't match the above, send back index.html
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname + '../client/build/index.html'));
-// });
+app.use(express.static(path.join(__dirname, '../client/build')));
+// Anything that doesn't match the above, send back index.html
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '../client/build/index.html'));
+});
