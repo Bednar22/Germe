@@ -8,7 +8,7 @@
 .flip-card {
     margin: 30px 30px 30px 30px;
     background-color: transparent;
-    width: 50%;
+    width: 40%;
     height: 300px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -57,13 +57,6 @@
     transform: rotateY(180deg);
 }
 
-.card-button {
-    /* border-radius: 10px;
-    border: 2px solid white; */
-    color: white;
-    padding: 5px 10px 5px 10px;
-}
-
 .card-button:hover {
     opacity: 0.9;
     color: whitesmoke;
@@ -71,4 +64,93 @@
 
 .white-text {
     color: white;
+}
+
+.under {
+    display: flex;
+    flex-direction: row;
+}
+
+.under-buttons {
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-left: 0.25rem;
+}
+
+.categories-dropdown {
+    position: relative;
+    margin-top: 1px;
+}
+
+.categories-menu-button {
+    color: white;
+    width: auto;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+    padding: 1em 2rem 1rem 2rem;
+    color: white;
+    position: fixed;
+    background: black;
+    width: 50%;
+    height: auto;
+    min-height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgb(32, 133, 123);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.modal-button-def {
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 25%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.modal-button-clicked {
+    width: 25%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+
+.close-button {
+    justify-content: end;
+    margin-bottom: 1rem;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
 }
